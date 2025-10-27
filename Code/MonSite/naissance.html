@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date de naissance</title>
+</head>
+<body>
+    <h1>Votre nombre de seconde</h1>
+    <select id="select_annee"></select>
+      <select id="select_mois"></select>
+        <select id="select_jour"></select>
+    <script>
+        //let e=document.getElementById("select_annee"); // ref vers le select
+        let e=document.querySelector("#select_annee"); // selecteur css => #select_annee => <element id="select_annee">
+        // let annee=1902; // variable annee = 1902 => point de départ
+        // while(annee<2026){
+        //     e.innerHTML=e.innerHTML+"<option>"+annee+"</option>";
+        //     //annee=annee+1;
+        //     annee++;            
+        // }
+
+        // boucle for : for(point de départ;condition pour continuer; evolution )
+        let derniere_annee=new Date().getFullYear(); // 2025 au 27/10/2025
+        let premiere_annee=derniere_annee-120;
+        for(let annee=premiere_annee;annee<=derniere_annee;annee++){
+            e.innerHTML=e.innerHTML+"<option>"+annee+"</option>";
+        }
+
+        let select_mois=document.querySelector("#select_mois");
+        for(let mois=1;mois<=12;mois++){
+             select_mois.innerHTML+="<option>"+mois+"</option>";
+        }
+
+        let select_jour=document.querySelector("#select_jour");
+        for(let jour=1;jour<=31;jour++){
+             select_jour.innerHTML+="<option>"+jour+"</option>";
+        }
+
+    </script>
+
+
+</body>
+</html>

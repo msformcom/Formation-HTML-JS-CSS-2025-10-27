@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			font-size: 30px;
+		}
+
+		h1 {
+			color: darkblue;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-size: 40px;
+			margin: 2em;
+			/* border-color: red;
+			border-style: dotted;
+			border-width: 5px; */
+			border: solid blue;
+			/* border-left-style: solid; */
+			border-width: 40px 5px 10px 20px;
+			border-radius: 20px 10px 6px 40px;
+
+
+		}
+
+		p {
+			color: red;
+			font-size: 0.6em;
+		}
+
+
+		button {
+			font-size: 0.8em;
+			background-color: green;
+			color: whitesmoke;
+			border-color: darkgreen;
+			border-radius: 10px;
+
+		}
+
+		section {
+			font-size: 0.8em;
+
+		}
+
+		section p {
+			font-size: 45px;
+		}
+
+		p {
+			color: green;
+		}
+
+		p.tres {
+			text-decoration: underline;
+			color: aqua;
+		}
+
+		p.important {
+			color: red;
+		}
+
+
+		.important {
+			color: green;
+		}
+
+		section.important {}
+
+		section p.important {}
+
+		section,
+		.important {}
+
+		section span {
+			background-color: lightgreen;
+			display: inline-block;
+			margin: 1em;
+			padding: 1em 2em 3em 0em;
+			border: solid 3px red;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="important">Mon compteur a </h1>
+	<h2></h2>
+	<p>0</p>
+	<input type="button" value="+1">
+	<button>+1</button>
+	<section>
+		<p class="important">La valeur du compteur <strong>peut</strong> être changée en appuyant le bouton</p>
+		<p>Vous pouvez appuyer autant que vous voulez</p>
+		<p class="important tres">jqshd;qh</p>
+	</section>
+	<section>
+		<span>sfsdfsd fsdfsd fsdf</span>
+		<span>sfsdfsd fsdfsd fsdf</span>
+		<span>sfsdfsd fsdfsd fsdf</span>
+		<span>sfsdfsd fsdfsd fsdf</span>
+		<span>sfsdfsd fsdfsd fsdf</span>
+	</section>
+	<section>
+		Le poisson est <span style="color:red; display: block;">rouge</span> et blanc
+	</section>
+</body>
+
+</html>
