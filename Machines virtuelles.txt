@@ -1,0 +1,28 @@
+Machines virtuelles
+
+
+Ouvrir un navigateur à l'adresse suivante :
+https://lab.ib-formation.fr
+
+Session: 25102797
+Salle: Labo11
+Formateur: DMS
+Date de début: 2025-10-27
+
+Utiliser vos identifiants
+
+
+Salle	Poste	Username	Password
+Labo11	Poste00	ib.51110027	AQmU8dLk
+Labo11	Poste01	jean.jover27	xJCwPrmp
+Labo11	Poste02	marie.bodinduringer27	aCezbLFX
+Labo11	Poste03	stephane.cuillierdemaindreville27	PwvzVcRF
+Labo11	Poste04	jean-marc.lemoal27	KvCHZMgA
+Labo11	Poste05	anil.kartal27	CEWku6z4
+
+
+
+Mot de passe de la machine :
+Pa55w.rd
+
+
