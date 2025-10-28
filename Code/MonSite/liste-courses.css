@@ -50,3 +50,22 @@ button {
     color: orange;
     text-decoration: line-through;
 }
+
+button[disabled]{
+
+}
+
+input[type='number']{
+
+}
+a[href$='.pdf']{
+
+}
+/* Liens non sécurisés */
+a[href^="http:"]{
+
+}
+
+a:not([href~="monentreprise.fr"]){
+
+}

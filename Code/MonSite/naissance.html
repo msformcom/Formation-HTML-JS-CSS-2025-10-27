@@ -1,44 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date de naissance</title>
+    <style>
+        #label_erreur {
+            background-color: lightpink;
+            color: red;
+            border-radius: 1em;
+            margin: 1em;
+        }
+
+        #label_resultat {
+            background-color: lightgreen;
+            color: green;
+            border-radius: 1em;
+            margin: 1em;
+        }
+
+        #label_erreur:empty {
+            background-color: green;
+            width: 1em;
+            height: 1em;
+        }
+
+        #label_resultat:empty {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Votre nombre de seconde</h1>
-    <select id="select_annee"></select>
-      <select id="select_mois"></select>
-        <select id="select_jour"></select>
+
+    <h1>Votre nombre de jours</h1>
+    <select id="select_annee" onchange="selectChanged()">
+        <option value="">---</option>
+    </select>
+    <select id="select_mois" onchange="selectChanged()">
+        <option value="">---</option>
+    </select>
+    <select id="select_jour" onchange="selectChanged()">
+        <option value="">---</option>
+    </select>
+    <div id="label_erreur">Entrez votre date de naissance</div>
+    <div id="label_resultat"></div>
     <script>
+        function selectChanged() {
+            let labelErreur = document.getElementById("label_erreur");
+            let labelResultat = document.getElementById("label_resultat");
+            let selectAnnee = document.getElementById("select_annee");
+            let selectMois = document.getElementById("select_mois");
+            let selectJour = document.getElementById("select_jour");
+            //labelResultat.innerHTML="";
+            labelErreur.innerHTML = "";
+            let annee = selectAnnee.value;
+            if (annee == "") {
+                labelErreur.innerHTML = "Choisissez une année";
+                return;
+            }
+            else {
+                selectAnnee.querySelector("option[value='']").remove()
+
+            }
+            let mois = selectMois.value;
+            if (mois == "") {
+                labelErreur.innerHTML = "Choisissez un mois";
+                return;
+            }
+            else {
+                selectMois.querySelector("option[value='']").remove()
+
+            }
+            let jour = selectJour.value;
+            if (jour == "") {
+                labelErreur.innerHTML = "Choisissez un jour";
+                return;
+            }
+            else {
+                selectJour.querySelector("option[value='']").remove()
+
+            }
+            let dateNaissance = new Date(parseInt(annee), parseInt(mois) - 1, parseInt(jour));
+            let nombreJours = Math.floor((new Date() - dateNaissance) / 1000 / 60 / 60 / 24);
+            //labelResultat.innerHTML="Vous avez "+ nombreJours +" jours";
+            labelResultat.innerHTML = `Vous avez ${nombreJours} jours`;
+        }
+
+        function setSelectRange(elementId, start, end) {
+            let selectElement = document.getElementById(elementId);
+            for (let value = start; value <= end; value++) {
+                // Création d'un nouvel objet type Option 
+                let option = new Option(value, value);
+                // Ajout de l'options au select
+                selectElement.options.add(option);
+            }
+        }
+        let derniere_annee = new Date().getFullYear(); // 2025 au 27/10/2025
+        let premiere_annee = derniere_annee - 120;
+        setSelectRange("select_annee", premiere_annee, derniere_annee);
+        setSelectRange("select_mois", 1, 12);
+        setSelectRange("select_jour", 1, 31);
+
+
+
+
         //let e=document.getElementById("select_annee"); // ref vers le select
-        let e=document.querySelector("#select_annee"); // selecteur css => #select_annee => <element id="select_annee">
+        // let e = document.querySelector("#select_annee"); // selecteur css => #select_annee => <element id="select_annee">
         // let annee=1902; // variable annee = 1902 => point de départ
         // while(annee<2026){
         //     e.innerHTML=e.innerHTML+"<option>"+annee+"</option>";
         //     //annee=annee+1;
-        //     annee++;            
+        //     annee++;
         // }
 
         // boucle for : for(point de départ;condition pour continuer; evolution )
-        let derniere_annee=new Date().getFullYear(); // 2025 au 27/10/2025
-        let premiere_annee=derniere_annee-120;
-        for(let annee=premiere_annee;annee<=derniere_annee;annee++){
-            e.innerHTML=e.innerHTML+"<option>"+annee+"</option>";
-        }
+        // let derniere_annee = new Date().getFullYear(); // 2025 au 27/10/2025
+        // let premiere_annee = derniere_annee - 120;
+        // for (let annee = premiere_annee; annee <= derniere_annee; annee++) {
+        //     e.innerHTML = e.innerHTML + '<option>' + annee + "</option>";
+        // }
 
-        let select_mois=document.querySelector("#select_mois");
-        for(let mois=1;mois<=12;mois++){
-             select_mois.innerHTML+="<option>"+mois+"</option>";
-        }
+        // let select_mois = document.querySelector("#select_mois");
+        // for (let mois = 1; mois <= 12; mois++) {
+        //     // Création d'un nouvel objet type Option
+        //     let o = new Option(mois, mois);
+        //     // Ajout de l'options au select
+        //     select_mois.options.add(o);
+        // }
 
-        let select_jour=document.querySelector("#select_jour");
-        for(let jour=1;jour<=31;jour++){
-             select_jour.innerHTML+="<option>"+jour+"</option>";
-        }
+        // let select_jour = document.querySelector("#select_jour");
+        // for (let jour = 1; jour <= 31; jour++) {
+        //     let o = document.createElement("option"); // o=> <option></option>
+        //     o.innerText = jour; // o=> <option>4</option>
+        //     o.setAttribute("value", jour);// o=> <option value="4">4</option>
+        //     select_jour.appendChild(o); // <select>.... <option value="4">4</option></select>
+
+        // }
+
+
 
     </script>
 
 
 </body>
+
 </html>

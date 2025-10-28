@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table {
+            /*
+            border-spacing: 1em;
+             border-collapse: collapse; */
+        }
+
+        td,
+        table {
+            border: solid 1px red;
+            min-width: 3em;
+            height: 3em;
+
+        }
+
+        td {}
+    </style>
+</head>
+
+<body>
+    <h1>Table</h1>
+    <table>
+        <tr>
+            <td colspan="2">d</td>
+            <td style="text-align: right; vertical-align: bottom;">d</td>
+            <td rowspan="2">e</td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td rowspan="2"></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2" rowspan="2"></td>
+
+          
+        </tr>
+        <tr>
+            <td></td>
+  
+       
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>
