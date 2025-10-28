@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculatrice</title>
     <link rel="stylesheet" href="calculatrice.css">
+     <script src="calculatrice.js" ></script>
 </head>
 <body>
     <h1>Calculatrice</h1>
@@ -17,12 +18,12 @@
 
         </tr>
         <tr>
-            <td><button class="touche">7</button></td>
-            <td><button class="touche">8</button></td>
+            <td><button add-to-screen="7" class="touche">7</button></td>
+            <td><button add-to-screen="8" class="touche">8</button></td>
             <td><button class="touche">9</button></td>
             <td rowspan="4"></td>
-            <td><button class="touche">CE</button></td>
-            <td><button class="touche">C</button></td>
+            <td><button class="touche" style="background-color: blue;">CE</button></td>
+            <td><button class="touche" style="background-color: red;">C</button></td>
         </tr>
         <tr>
             <td><button class="touche">4</button></td>
@@ -48,5 +49,6 @@
 
         </tr>
     </table>
+   
 </body>
 </html>

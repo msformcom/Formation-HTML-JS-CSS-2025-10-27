@@ -15,7 +15,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     background: #f2f6f7;
-background: linear-gradient(116deg,rgba(242, 246, 247, 1) 0%, rgba(145, 145, 142, 1) 100%);
+    background: linear-gradient(116deg, rgba(242, 246, 247, 1) 0%, rgba(145, 145, 142, 1) 100%);
 }
 
 td {
@@ -39,6 +39,7 @@ td:has(button) {
 }
 
 .touche {
+    transition: all 0.1s;
     box-shadow: 0px 0px 14px black;
     background-color: whitesmoke;
     font-size: 2em;
@@ -49,6 +50,18 @@ td:has(button) {
     border-radius: 0.3em;
 }
 
+.touche:hover {
+    background-color: #DDDDDD;
+
+
+}
+
+.touche:active {
+    box-shadow: 5px 5px 14px black;
+    position: relative;
+    top: 0.05em;
+    left:  0.05em;
+}
 
 #ecran {
     font-family: digital;
