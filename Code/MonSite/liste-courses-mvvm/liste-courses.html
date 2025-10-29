@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title inner-html="label" ></title>
+    <script src="liste-courses.vm.js" type="module" defer></script>
+</head>
+<body>
+    <p inner-json></p>
+    <h1 inner-html="label"></h1>
+    <p inner-html="description"></p>
+    <p inner-html="creationDate"></p>
+    <template id="shopping-element-tempate">
+        <!-- Template : pas affiché mais permet de spécifier comment un ShoppingElement 
+         va être affiché -->
+        <div>
+            <span inner-html="label"></span>
+            <span inner-html="shoppingDate"></span>
+        </div>
+    </template>
+    
+</body>
+</html>
