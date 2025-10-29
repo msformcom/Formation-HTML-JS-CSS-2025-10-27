@@ -12,11 +12,9 @@ export class ShoppingElement{
     label="Nouvel élément";
     shoppingDate=undefined;
     qty=1;
-<<<<<<< HEAD
 
     markAsShopped(){
         this.shoppingDate=new Date();
     }
-=======
->>>>>>> 615020081e22226652e9b221b17168be1b3fb6c0
+
 }
