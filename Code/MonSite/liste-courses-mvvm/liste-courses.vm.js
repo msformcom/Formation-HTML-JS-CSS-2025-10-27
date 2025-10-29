@@ -1,17 +1,25 @@
+import { fetchDataAsync } from "./fetchData.js";
 import { ShoppingElement } from "./shopping-element.js";
 import { ShoppingList } from "./shopping-list.js";
 
 // Initialisation de la liste à afficher
 // ici => données écrites à la main
 
-let listeAAfficher = new ShoppingList();
-listeAAfficher.label = "Ma liste de friandises";
-listeAAfficher.description = "Mes bonbons que je vais acheter miam miam";
-let element1 = new ShoppingElement();
-element1.label = "Chocolat";
-element1.qty = 4;
-listeAAfficher.addElement(element1);
-listeAAfficher.addElement(new ShoppingElement("Gateaux", 6))
+// let listeAAfficher = new ShoppingList();
+// listeAAfficher.label = "Ma liste de friandises";
+// listeAAfficher.description = "Mes bonbons que je vais acheter miam miam";
+// let element1 = new ShoppingElement();
+// element1.label = "Chocolat";
+// element1.qty = 4;
+// listeAAfficher.addElement(element1);
+// listeAAfficher.addElement(new ShoppingElement("Gateaux", 6))
+let listeAAfficher;
+fetchDataAsync("/data.json").then( r=>{
+        // MAJ UI avec les données de listeAAfficher
+        listeAAfficher=r;
+        majUI(document, r);
+    }
+)
 
 function majUI(element, objetAAfficher) {
     // mettre les inner-html  dans l'interface
@@ -68,5 +76,4 @@ function markAsShopped(e) {
     majUI(document, listeAAfficher);
 }
 
-// MAJ UI avec les données de listeAAfficher
-majUI(document, listeAAfficher);
+

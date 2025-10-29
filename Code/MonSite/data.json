@@ -1,15 +1,15 @@
 {
-    "label": "Ma liste de friandises",
+    "nom": "Ma liste de friandises",
     "description": "Mes bonbons que je vais acheter miam miam",
-    "creationDate": "2025-10-29T13:33:35.294Z",
+    "date": "2025-10-29T13:33:35.294Z",
     "elements": [
         {
-            "label": "Chocolat",
+            "nom": "Chocolat",
             "shoppingDate": "2025-10-29T13:33:42.927Z",
             "qty": 4
         },
         {
-            "label": "Gateaux",
+            "nom": "Gateaux",
             "qty": 6
         }
     ]
