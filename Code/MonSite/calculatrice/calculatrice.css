@@ -50,6 +50,19 @@ td:has(button) {
     border-radius: 0.3em;
 }
 
+.touche.bleue{
+     background-color: blue;
+}
+.touche.verte{
+     background-color: green;
+}
+.touche.jaune{
+     background-color: yellow;
+}
+.touche.rouge{
+    background-color: red;
+}
+
 .touche:hover {
     background-color: #DDDDDD;
 

@@ -11,7 +11,7 @@ h1 {
     color: maroon;
 }
 
-button {
+.done>button, .not-done button {
     color: whitesmoke;
     padding: 0em 0.5em 0em 0.5em;
     border-radius: 0em 1em 1em 0em;
@@ -68,4 +68,23 @@ a[href^="http:"]{
 
 a:not([href~="monentreprise.fr"]){
 
+}
+
+div:nth-child(1){
+
+}
+
+div:nth-child(2n+1){
+
+}
+
+div:nth-child(3n+2){
+    
+}
+table tbody tr:nth-child(-2n+1){
+
+}
+
+div:last-child{
+    
 }

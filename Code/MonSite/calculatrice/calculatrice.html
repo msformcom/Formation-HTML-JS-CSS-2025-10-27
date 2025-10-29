@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="calculatrice.css">
+     <script src="calculatrice.js" ></script>
+</head>
+<body>
+    <h1>Calculatrice</h1>
+    <p class="d-none-sm">Une jolie Calculatrice</p>
+    <table class="d-none-print">
+        <tr>
+            <td colspan="6" class="ecran">
+                <div id="ecran">0</div>
+            </td>
+
+        </tr>
+        <tr>
+            <td><button add-to-screen="7" class="touche" add-to-screen="7">7</button></td>
+            <td><button add-to-screen="8" class="touche" add-to-screen="8">8</button></td>
+            <td><button class="touche" add-to-screen="9">9</button></td>
+            <td rowspan="4"></td>
+            <td><button class="touche bleue" clear-screen>CE</button></td>
+            <td><button class="touche rouge" clear-last>C</button></td>
+        </tr>
+        <tr>
+            <td><button class="touche" add-to-screen="4">4</button></td>
+            <td><button class="touche" add-to-screen="5">5</button></td>
+            <td><button class="touche" add-to-screen="6">6</button></td>
+            <td><button class="touche" add-to-screen="/">/</button></td>
+            <td><button class="touche" add-to-screen="*">x</button></td>
+        </tr>
+        <tr>
+            <td><button class="touche" add-to-screen="1">1</button></td>
+            <td><button class="touche" add-to-screen="2">2</button></td>
+       
+            <td><button class="touche" add-to-screen="3">3</button></td>
+            <td><button class="touche" add-to-screen="-">-</button></td>
+            <td rowspan="2"><button class="touche verte"  add-to-screen="+">+</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button class="touche" add-to-screen="0">0</button></td>
+         
+            <td><button class="touche" add-to-screen=".">.</button></td>
+            <td><button class="touche jaune" calculate-result>=</button></td>
+
+
+        </tr>
+    </table>
+   
+</body>
+</html>
